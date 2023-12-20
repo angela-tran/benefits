@@ -16,7 +16,7 @@ jobs:
       - name: Start app
         run: |
           touch .env
-          #docker compose up --detach client server
+          docker compose up --detach client server
 
       - name: docker env values
         run: |
