@@ -16,12 +16,12 @@ jobs:
       - name: Start app
         run: |
           touch .env
-          docker compose up --detach client server
+          #docker compose up --detach client server
 
-      - name: logs
+      - name: docker env values
         run: |
-          docker compose logs
-          env
+          docker compose run --entrypoint bash server
+          env | sort
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
