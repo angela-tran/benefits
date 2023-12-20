@@ -18,6 +18,10 @@ jobs:
           touch .env
           docker compose up --detach client server
 
+      - name: docker env values
+        run: |
+          docker compose exec server env
+
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         env:

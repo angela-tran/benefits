@@ -33,7 +33,7 @@ services:
     ports:
       - "8001"
     volumes:
-      - ./:/home/calitp/app
+      - ./:/home/calitp/app 
 
   server:
     image: ghcr.io/cal-itp/eligibility-server:dev
