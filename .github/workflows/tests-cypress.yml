@@ -20,7 +20,7 @@ jobs:
 
       - name: logs
         run: |
-          docker compose logs -f
+          docker compose logs
           env
 
       - name: Run Cypress tests
