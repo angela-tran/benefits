@@ -20,8 +20,7 @@ jobs:
 
       - name: docker env values
         run: |
-          docker compose run --entrypoint bash server
-          env | sort
+          docker compose exec server "env | sort"
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
